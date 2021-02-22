@@ -98,10 +98,7 @@ def game(_string, player):
         list_rows = [list(new_string[:3]), list(new_string[3:-3]), list(new_string[6:])]
         new_string = get_move(list_rows, player)
         massage, end_game = status_game(new_string)
-        if player == 'X':
-            player = 'O'
-        else:
-            player = 'X'
+        player = 'O' if player == 'X' else 'X'
     print(massage)
 
 
